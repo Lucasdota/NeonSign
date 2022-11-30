@@ -1,0 +1,414 @@
+/*variables for the neon colors*/
+:root{
+    --color1:cyan;
+    --color2:#BCECE0;
+    --color3:cyan;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    background:url(https://images.pexels.com/photos/3075993/pexels-photo-3075993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-color: #464646;
+}
+
+/*box-shadow for outside neon glow*/
+.container{
+    background: rgba(10, 10, 10, 50%);
+    height:7.5rem;
+    min-height:100px;
+    max-height:187px;
+    width:50vw;
+    min-width:360px;
+    max-width:900px;
+    margin:4em auto;
+    padding:1%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    outline: 4px solid var(--color3);
+    box-shadow:0px 0px 40px 5px var(--color3);
+    border-radius:0.1mm;
+    z-index:999;
+}
+
+/*it has a min-width so the board doesn't become too small when resizing and 
+also a max-height and width so it doesn't become too big; it is a flexbox
+with row direction so the main axis is horizontal displaying the divs one after 
+another from left to right; had to set the position to absolute to correct the 
+positioning with top:0%; 50% opacity background for cool design; box shadow for 
+inside neon glow*/
+.container2{
+    background: rgba(10, 10, 10, 50%);
+    height:7.5rem;   
+    min-height:100px;
+    max-height:187px;
+    width:50vw;
+    min-width:360px;
+    max-width:900px;
+    margin:4em auto;
+    padding:1%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    outline: 4px solid var(--color3);
+    box-shadow:inset 0px 0px 10px var(--color3);
+    border-radius:0.1mm;
+    z-index:999;
+    position:absolute;
+    top:0%;
+}
+
+ /*it is a flexbox with column direction, so the parts of the letters will be 
+ displayed from top to bottom; put a center justification to help position the 
+ .c2 div; for all it's children put an outline (thought it looked cooler than 
+ borders) with proper border-radius; a linear-gradient background to give it a 
+ neon look*/
+.c{
+    height:100%;
+    width:15%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.c1{
+    background:linear-gradient(180deg,var(--color1),var(--color2),var(--color1));
+    outline: 2px solid var(--color1);
+    box-shadow:0px 0px 40px var(--color1);
+    height:2vh;
+    min-height:13%;
+    width:11vw;
+    max-width:96%;
+    z-index:999;
+    border-top-left-radius: 0.1mm;
+    border-top-right-radius: 0.1mm;
+    border-bottom-right-radius: 0.1mm;
+}
+
+.c2{
+    background:linear-gradient(90deg,var(--color1),var(--color2),var(--color1));
+    outline: 2px solid var(--color1);
+    box-shadow:0px 0px 40px var(--color1);
+    height:85%;
+    width:1.1vw;
+    min-width:16%;
+}
+
+.c3{
+    background:linear-gradient(180deg,var(--color1),var(--color2),var(--color1));
+    outline: 2px solid var(--color1);
+    box-shadow:0px 0px 40px var(--color1);
+    height:2vh;
+    min-height:13%;
+    width:11vw;
+    max-width:96%;
+    z-index:999;
+    border-bottom-left-radius: 0.1mm;
+    border-top-right-radius: 0.1mm;
+    border-bottom-right-radius: 0.1mm;
+}
+
+.o{
+    height:100%;
+    width:15%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.o1{
+    background:linear-gradient(180deg,var(--color1),var(--color2),var(--color1));
+    outline: 2px solid var(--color1);
+    box-shadow:0px 0px 40px var(--color1);
+    height:2vh;
+    min-height:13%;
+    width:11vw;
+    max-width:100%;
+    z-index:999;
+    border-top-left-radius: 0.1mm;
+    border-top-right-radius: 0.1mm;
+}
+
+.o2{
+    background:linear-gradient(90deg,var(--color1),var(--color2),var(--color1));
+    outline: 2px solid var(--color1);
+    box-shadow:0px 0px 40px var(--color1);
+    height:85%;
+    width:1.1vw;
+    min-width:16%;
+}
+
+.o3{
+    background:linear-gradient(180deg,var(--color1),var(--color2),var(--color1));
+    outline: 2px solid var(--color1);
+    box-shadow:0px 0px 40px var(--color1);
+    height:2vh;
+    min-height:13%;
+    width:11vw;
+    max-width:100%;
+    z-index:999;
+    border-bottom-left-radius: 0.1mm;
+    border-bottom-right-radius: 0.1mm;
+}
+
+/*had to set an absolute position to this last part of the letter because the 
+main axis is vertical due to the flex-diretion of it's parent element, so it 
+would be displayed under the .o3 div, not to the right-side of it*/
+.o4{
+    background:linear-gradient(90deg,var(--color1),var(--color2),var(--color1));
+    outline: 2px solid var(--color1);
+    box-shadow:0px 0px 40px var(--color1);
+    height:12vh;
+    min-height:72%;
+    width:calc(8px + (35 - 8) * ((100vw - 360px) / (3840 - 360)));
+    align-self: flex-end;
+    position:absolute;
+}
+
+.d{
+    height:100%;
+    width:15%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.d1{
+    background:linear-gradient(180deg,var(--color1),var(--color2),var(--color1));
+    outline: 2px solid var(--color1);
+    box-shadow:0px 0px 40px var(--color1);
+    height:2vh;
+    min-height:13%;
+    width:5.6vw;
+    min-width:85%;
+    z-index:999;
+    border-top-left-radius: 0.1mm;
+    border-top-right-radius: 0.1mm;
+}
+
+.d2{
+    background:linear-gradient(90deg,var(--color1),var(--color2),var(--color1));
+    outline: 2px solid var(--color1);
+    box-shadow:0px 0px 40px var(--color1);
+    height:85%;
+    width:1.1vw;
+    min-width:16%;
+}
+
+.d3{
+    background:linear-gradient(180deg,var(--color1),var(--color2),var(--color1));
+    outline: 2px solid var(--color1);
+    box-shadow:0px 0px 40px var(--color1);
+    height:2vh;
+    min-height:13%;
+    width:5.6vw;
+    min-width:85%;
+    z-index:999;
+    border-bottom-left-radius: 0.1mm;
+    border-bottom-right-radius: 0.1mm;
+}
+
+/*had to set an absolute position to this last part of the letter because the 
+main axis it vertical due to the flex-diretion of it's parent element, so it 
+would be displayed under the .o3 div, not to the right-side of it*/
+.d4{
+    background:linear-gradient(90deg,var(--color1),var(--color2),var(--color1));
+    outline: 2px solid var(--color1);
+    box-shadow:0px 0px 40px var(--color1);
+    height:calc(80px + (120 - 80) * ((100vw - 360px) / (3840 - 360)));
+    width:calc(8px + (35 - 8) * ((100vw - 360px) / (3840 - 360)));
+    align-self: flex-end;
+    position:absolute;
+    border-top-right-radius: 0.1mm;
+    border-bottom-right-radius: 0.1mm;
+}
+
+.i{
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center; 
+    gap:10%;
+}
+
+.i1{
+    background:linear-gradient(90deg,var(--color1),var(--color2),var(--color1));
+    outline: 2px solid var(--color1);
+    box-shadow:0px 0px 40px var(--color1);
+    height:3vh;
+    min-height:20%;
+    width:calc(8px + (35 - 8) * ((100vw - 360px) / (3840 - 360)));
+    min-width:16%;
+    border-top-left-radius: 0.1mm;
+    border-top-right-radius: 0.1mm;
+    border-bottom-right-radius: 0.1mm;
+    border-bottom-left-radius:0.1mm;
+}
+
+.i2{
+    background:linear-gradient(90deg,var(--color1),var(--color2),var(--color1));
+    outline: 2px solid var(--color1);
+    box-shadow:0px 0px 40px var(--color1);
+    height:15vh;
+    min-height:70%;
+    width:calc(8px + (35 - 8) * ((100vw - 360px) / (3840 - 360)));
+    min-width:16%;
+    border-top-left-radius: 0.1mm;
+    border-top-right-radius: 0.1mm;
+    border-bottom-right-radius: 0.1mm;
+    border-bottom-left-radius:0.1mm;
+}
+
+/*the only letter that has a row direction, because it is better to set the 
+position of the N design divs*/
+.n{
+    height:100%;
+    width:15%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+}
+
+.n1{
+    background:linear-gradient(90deg,var(--color1),var(--color2),var(--color1));
+    outline: 2px solid var(--color1);
+    box-shadow:0px 0px 40px var(--color1);
+    height:calc(120px + (122 - 120) * ((100vw - 360px) / (3840 - 360)));
+    width:1.1vw;
+    min-width:16%;
+    z-index:999;
+    border-top-left-radius: 0.1mm;
+    border-bottom-right-radius: 0.1mm;
+    border-bottom-left-radius:0.1mm;
+}
+
+.n2{
+    background:linear-gradient(180deg,var(--color1),var(--color2),var(--color1));
+    outline: 2px solid var(--color1);
+    box-shadow:0px 0px 40px var(--color1);
+    height:2vh;
+    min-height:13%;
+    width:1.5vw;
+    min-width:25%;
+    max-width:35%;
+    align-self:flex-start;
+}
+
+.n3{
+    background:linear-gradient(90deg,var(--color1),var(--color2),var(--color1));
+    outline: 2px solid var(--color1);
+    box-shadow:0px 0px 40px var(--color1);
+    height:calc(120px + (122 - 120) * ((100vw - 360px) / (3840 - 360)));
+    width:1.1vw;
+    min-width:16%;
+    z-index:999;
+    border-top-left-radius: 0.1mm;
+    border-bottom-left-radius:0.1mm;
+}
+
+.n4{
+    background:linear-gradient(180deg,var(--color1),var(--color2),var(--color1));
+    outline: 2px solid var(--color1);
+    box-shadow:0px 0px 40px var(--color1);
+    height:2vh;
+    min-height:13%;
+    width:1.5vw;
+    min-width:25%;
+    max-width:35%;
+    align-self:flex-end;
+}
+
+.n5{
+    background:linear-gradient(90deg,var(--color1),var(--color2),var(--color1));
+    outline: 2px solid var(--color1);
+    box-shadow:0px 0px 40px var(--color1);
+    height:calc(120px + (122 - 120) * ((100vw - 360px) / (3840 - 360)));
+    width:1.1vw;
+    min-width:16%;
+    border-top-left-radius: 0.1mm;
+    border-top-right-radius: 0.1mm;
+    border-bottom-right-radius: 0.1mm;
+}
+
+.g{
+    height:100%;
+    width:15%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.g1{
+    background:linear-gradient(180deg,var(--color1),var(--color2),var(--color1));
+    outline: 2px solid var(--color1);
+    box-shadow:0px 0px 40px var(--color1);
+    height:2vh;
+    min-height:13%;
+    width:11vw;
+    max-width:96%;
+    z-index:999;
+    border-top-left-radius: 0.1mm;
+    border-top-right-radius: 0.1mm;
+    border-bottom-right-radius: 0.1mm;
+}
+
+.g2{
+    background:linear-gradient(90deg,var(--color1),var(--color2),var(--color1));
+    outline: 2px solid var(--color1);
+    box-shadow:0px 0px 40px var(--color1);
+    height:calc(120px + (122 - 120) * ((100vw - 360px) / (3840 - 360)));
+    max-height:85%;
+    width:1.1vw;
+    min-width:20%;
+}
+
+.g3{
+    background:linear-gradient(180deg,var(--color1),var(--color2),var(--color1));
+    outline: 2px solid var(--color1);
+    box-shadow:0px 0px 40px var(--color1);
+    height:2vh;
+    min-height:13%;
+    width:11vw;
+    max-width:96%;
+    display: flex;
+    justify-content: flex-end;
+    z-index:999;
+    border-bottom-right-radius: 0.1mm;
+}
+
+.g4{
+    background:linear-gradient(90deg,var(--color1),var(--color2),var(--color1));
+    outline: 2px solid var(--color1);
+    box-shadow:0px 0px 40px var(--color1);
+    height:calc(50px + (60 - 50) * ((100vw - 360px) / (3840 - 360)));
+    width:1.1vw;
+    min-width:16%;
+    align-self: flex-end;
+    border-bottom-right-radius:0.1mm;
+}
+
+/*set an absolute position so it becomes visible inside it's parent element; set 
+a little margin-right to align the end of it with it's brothers*/
+.g5{
+    background:linear-gradient(180deg,var(--color1),var(--color2),var(--color1));
+    outline: 2px solid var(--color1);
+    box-shadow:0px 0px 40px var(--color1);
+    height:2vh;
+    min-height:13%;
+    width:3.5vw;
+    position:absolute;
+    align-self: flex-end;
+    margin-right: calc(100%/180);
+    z-index:999;
+    border-top-left-radius: 0.1mm;
+    border-top-right-radius: 0.1mm;
+    border-bottom-left-radius:0.1mm;
+}

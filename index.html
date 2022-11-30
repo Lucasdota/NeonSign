@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+    Description:
+
+        - A neon sign saying "coding" using only divs and flexbox to test the power of these features.
+        Responsive design with a centered background; elements using units like vw, vh and percentage; and calc. 
+        
+    Knowledges applied:
+
+        .divs to design the letters
+        .flexbox to orient the elements, grid probably would be better, but I wanted to explore the power of flex divs
+        .powerful colors to give it a neon kinda style
+        .shadows to give it a neon kinda style
+        .two containers to apply shadows in and out of them to give it a neon kinda style
+        .gradient background inside the letters to give it a neon kinda style
+        .round borders to make it look more aesthetic
+        .responsive units to adjust the sign to whatever device's width and height it is dealing with, resize the window however you want, check it!
+        .variables used to quickly select any color theme you want, just change them however you like, go on!
+        .viewport meta tag to adjust the width according to the device's width
+        .description meta tag to help browsers understand the content
+        .link tag to add icon to the browser tab bar
+        .and more
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A neon sign using html and css to practice the 
+        power of flex divs and colors.">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/5300/5300285.png">
+        <title>Neon Sign</title>
+    </head>    
+    <body>
+        <div class="container"> <!--first div to create the outside shadow effect with 
+            box-shadow css; it has the same properties of it's child-->
+            <div class="container2"> <!--second div to create the inside shadow effect and 
+                put the letters;-->
+                <div class="c"> <!--main container where all parts of the letter will be-->                    
+                    <div class="c1"></div>
+                    <div class="c2"></div>
+                    <div class="c3"></div>
+                </div>
+                <div class="o">
+                    <div class="o1"></div>
+                    <div class="o2"></div>
+                    <div class="o3"></div>
+                    <div class="o4"></div>
+                </div>
+                <div class="d">
+                    <div class="d1"></div>
+                    <div class="d2"></div>
+                    <div class="d3"></div>
+                    <div class="d4"></div>
+                </div>
+                <div class="i">
+                    <div class="i1"></div>
+                    <div class="i2"></div>
+                </div>
+                <div class="n">
+                    <div class="n1"></div>
+                    <div class="n2"></div>
+                    <div class="n3"></div>
+                    <div class="n4"></div>
+                    <div class="n5"></div>
+                </div>
+                <div class="g">
+                    <div class="g1"></div>
+                    <div class="g2"></div>
+                    <div class="g3">
+                        <div class="g4"></div><!--put inside the g3 with a flex-end alignment so
+                        it becomes proper positioned attached to the end of it-->
+                    </div>
+                    <div class="g5"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
