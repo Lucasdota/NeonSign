@@ -1,4 +1,4 @@
-/*variables for the neon colors*/
+/*variables for the neon colors, change them as you like as see the results*/
 :root{
     --color1:cyan;
     --color2:#BCECE0;
@@ -10,7 +10,7 @@ html{
 }
 
 body{
-    background:url(https://images.pexels.com/photos/3075993/pexels-photo-3075993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background:url(images/Nightcitysky.jpg);
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
